@@ -75,7 +75,7 @@
     function db_insert_query($table,$fields,$values){
         include 'connection.php';
         $query = "INSERT INTO ".$table." ".$fields." VALUES ".$values;
-		echo $query;
+		//echo $query;
 		return mysqli_query($conn, $query);                        //inserts to db
     };
 

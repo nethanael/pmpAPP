@@ -27,12 +27,26 @@
 	//$year = date("y");
     $today = date("d/m/y H:i a");
     	
-	if (false)
+	if ( $network_name == '' || $manufacturer == '' || $model == '' || $mnemonic == '' || $province == '' || $region == '' ||
+	$longitude == '' || $latitude == '' )
 
 	{
-		$_SESSION['ADD_EQUIPMENT_ERROR'] = "¡Todos los campos son obligatorios!";
-		$_SESSION['_TEMP'] = $A;
-		$_SESSION['_TEMP'] = $B;
+		$_SESSION['ADD_EQUIPMENT_ERROR'] = "¡Los campos marcados con asterisco son obligatorios!";
+
+		$_SESSION['NETWORK_NAME_TEMP'] = $network_name;
+		$_SESSION['LOCATION_TEMP'] = $location;
+		$_SESSION['CENTRAL_CODE_TEMP'] = $central_code;
+		$_SESSION['DISTRICT_CODE_TEMP'] = $district_code;
+		$_SESSION['MNEMONIC_TEMP'] = $mnemonic;
+		$_SESSION['SIMO_CODE_TEMP'] = $simo_code;
+		$_SESSION['CANTON_TEMP'] = $canton;
+		$_SESSION['DISTRICT_NAME_TEMP'] = $district_name;
+		$_SESSION['TOWN_TEMP'] = $town;
+		$_SESSION['PROPERTY_NAME_TEMP'] = $property_name;
+		$_SESSION['PROPERTY_ID_TEMP'] = $property_id;
+		$_SESSION['LONGITUDE_TEMP'] = $longitude;
+		$_SESSION['LATITUDE_TEMP'] = $latitude;
+
 		header("Location: ../add_fixed_equipment.php");
 	}
 	else
@@ -41,10 +55,10 @@
         $table='add_equipment';
 
         $fields='(network_name, manufacturer, model, installation_type, location, central_code, district_code, mnemonic, simo_code, 
-        province, canton, district_name, town, property_name, property_id, region, longitude, latitude, status )';
+        province, canton, district_name, town, property_name, property_id, region, longitude, latitude )';
         
         $values="('$network_name','$manufacturer', '$model', '$installation_type', '$location', '$central_code', '$district_code', '$mnemonic', '$simo_code', 
-		'$province', '$canton', '$district_name', '$town', '$property_name', '$property_id', '$region', '$longitude', '$latitude', '$status')";
+		'$province', '$canton', '$district_name', '$town', '$property_name', '$property_id', '$region', '$longitude', '$latitude')";
 
         db_insert_query($table, $fields, $values);
     
@@ -57,7 +71,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0">
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<link rel="stylesheet" href="../css/test_borders.css">
-		<title>Sistema de Informes</title>
+		<title>Plan de Mantenimiento Preventivo</title>
 	</head>
 <body>
 	<div class = "container my_cont">
@@ -71,7 +85,7 @@
 				<table class="table table-bordered">
 					<tr>
 						<td></td>
-						<td class="my_td"><img src="../imgs/new_task.png"></td>
+						<td class="my_td"><img src="../imgs/eq_small.png"></td>
 						<td></td>
 					</tr>
 					<tr>
@@ -92,6 +106,23 @@
 
 	</div>
 
-	<?php $_SESSION['ADD_EQUIPMENT_ERROR'] = '';}?>
+	<?php 
+	
+	$_SESSION['ADD_EQUIPMENT_ERROR'] = '';
+	$_SESSION['NETWORK_NAME_TEMP'] = '';
+	$_SESSION['LOCATION_TEMP'] = '';
+	$_SESSION['CENTRAL_CODE_TEMP'] = '';
+	$_SESSION['DISTRICT_CODE_TEMP'] = '';
+	$_SESSION['MNEMONIC_TEMP'] = '';
+	$_SESSION['SIMO_CODE_TEMP'] = '';
+	$_SESSION['CANTON_TEMP'] = '';
+	$_SESSION['DISTRICT_NAME_TEMP'] = '';
+	$_SESSION['TOWN_TEMP'] = '';
+	$_SESSION['PROPERTY_NAME_TEMP'] = '';
+	$_SESSION['PROPERTY_ID_TEMP'] = '';
+	$_SESSION['LONGITUDE_TEMP'] = '';
+	$_SESSION['LATITUDE_TEMP'] = '';
+	
+	}?>
 </body>
 </html>

@@ -7,7 +7,7 @@
     $password = 'mOkq6JpIdTYTmwKU'; 
     
     //-> intranet real server
-    //$password = 'deleted;      
-    $myDB = 'pmpAPP';
+    //$password = 'IYbvadgV521gxaUs@';      
+    $myDB = 'pmpapp';
 
 ?>
