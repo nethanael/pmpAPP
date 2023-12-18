@@ -19,11 +19,11 @@
 
     include 'includes/functions.php';
 
-    $tasks_table="add_fixed_equipment";
+    $tasks_table="add_mobile_equipment";
 
-    $fields="add_fixed_equipment.equipment_code, add_fixed_equipment.network_name, add_fixed_equipment.manufacturer, add_fixed_equipment.model, add_fixed_equipment.region, add_fixed_equipment.status";
+    $fields="add_mobile_equipment.equipment_code, add_mobile_equipment.network_name, add_mobile_equipment.manufacturer, add_mobile_equipment.model, add_mobile_equipment.region, add_mobile_equipment.status";
 
-    $whereClause="add_fixed_equipment.status='pendiente'";
+    $whereClause="add_mobile_equipment.status='pendiente'";
 
     $result = db_select_simple($tasks_table, $fields, $whereClause);
 
@@ -50,7 +50,7 @@
                 <table class="table table-sm table-striped table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th class="my_td" colspan="10">Equipos fijos pendientes añadir:</th>
+                            <th class="my_td" colspan="10">Equipos móviles pendientes añadir:</th>
                         </tr>
                         <tr>
                             <td colspan="10"><small>Haga click en el codigo de sistema para ver detalle.</small></td>
@@ -72,7 +72,7 @@
                                     foreach ($line as $col_name => $col_value)
                                     {
                                         if ($col_name == 'equipment_code'){
-                                            echo "<td class='my_td'><a class='btn btn-primary' href=add_fixed_equipment_detail.php?data=",$col_value,">$col_value</a></td>";
+                                            echo "<td class='my_td'><a class='btn btn-primary' href=add_mobile_equipment_detail.php?data=",$col_value,">$col_value</a></td>";
                                         }
                                         if ($col_name != 'equipment_code'){
                                             echo "<td><small>$col_value</small></td>";

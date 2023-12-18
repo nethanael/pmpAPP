@@ -43,6 +43,7 @@
 					</tr>
                     <tr>
 						<td class="my_td"><a class="btn btn-light btn-block" href="fixed_equipment_pending.php">Pendientes Agregar Fijo</a></td>
+						<td class="my_td"><a class="btn btn-light btn-block" href="mobile_equipment_pending.php">Pendientes Agregar Móvil</a></td>
 					</tr>
 					<tr>
 						<th class="my_td h5" colspan="2">WebMaps Inal&aacutembrico:<th>

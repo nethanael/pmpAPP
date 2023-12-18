@@ -52,7 +52,7 @@
 	else
 	{		
 
-        $table='add_fixed_equipment';
+        $table='add_mobile_equipment';
 
         $fields='(network_name, manufacturer, model, installation_type, location, central_code, district_code, mnemonic, simo_code, 
         province, canton, district_name, town, property_name, property_id, region, longitude, latitude )';

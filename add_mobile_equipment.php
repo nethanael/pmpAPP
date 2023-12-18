@@ -40,7 +40,7 @@
         <div class = "row justify-content-center my_row">
 			<div class = "col-6 my_col">
 				<!-- (row_!Centro!) -->
-                <form name="" method="post" action="scripts/add_fixed_equipment.php"> 
+                <form name="" method="post" action="scripts/add_mobile_equipment.php"> 
                     <table class="table table-striped">
                         <thead class="thead-dark">
                             <tr>
@@ -80,7 +80,7 @@
                             <td>*Fabricante:</td>
                             <td>
                                 <?php  
-                                    $query = "SELECT manufacturer_name FROM fixed_manufacturers";   
+                                    $query = "SELECT manufacturer_name FROM mobile_manufacturers";   
                                     echo dynamic_select(db_1D_query($query), 'manufacturer', '', 'some_var');
                                 ?>
                             </td>
@@ -89,7 +89,7 @@
                             <td>*Modelo:</td>
                             <td>
                                 <?php  
-                                    $query = "SELECT model_name FROM fixed_models";   
+                                    $query = "SELECT model_name FROM mobile_models";   
                                     echo dynamic_select(db_1D_query($query), 'model_name', '', 'some_var');
                                 ?>
                             </td>
@@ -98,8 +98,12 @@
                             <td>Tipo de instalación:</td>
                             <td>
                                 <select name="installation_type" id="installation_type">
-                                    <option value="interior">interior</option>
-                                    <option value="exterior">exterior</option>
+                                    <option value="Radio Base">Radio Base</option>
+                                    <option value="Enlace Inalambrico">Enlace Inalámbrico</option>
+                                    <option value="ATN">ATN</option>
+                                    <option value="LandSwitch">LandSwitch</option>
+                                    <option value="WiMAX">WiMAX</option>
+                                    <option value="VSAT">VSAT</option>
                                 </select>
                             </td>
                         </tr>
@@ -138,7 +142,7 @@
                                     name="district_code" 
                                     type="number"
                                     id="district_code" 
-                                    size="" 
+                                    size=""
                                     maxlength="3"
                                     placeholder="018"
                                     value="<?php echo $_SESSION['DISTRICT_CODE_TEMP']; ?>"
@@ -278,7 +282,7 @@
                                     id="longitude" 
                                     size="" 
                                     maxlength=""
-                                    placeholder="-84.03109"
+                                    placeholder="-84,03109"
                                     value="<?php echo $_SESSION['LONGITUDE_TEMP']; ?>"
                                 >
                             </td>
@@ -292,7 +296,7 @@
                                     id="latitude" 
                                     size="" 
                                     maxlength=""
-                                    placeholder="9.91121"
+                                    placeholder="9,91121"
                                     value="<?php echo $_SESSION['LATITUDE_TEMP']; ?>"
                                 >
                             </td>

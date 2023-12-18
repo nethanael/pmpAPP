@@ -22,9 +22,9 @@
 
     //------------------First query-------------------------------
 
-    $tasks_table="add_fixed_equipment";
+    $tasks_table="add_mobile_equipment";
     $fields="*";
-    $whereClause="add_fixed_equipment.status='pendiente' AND add_fixed_equipment.equipment_code='$equipment_code'";
+    $whereClause="add_mobile_equipment.status='pendiente' AND add_mobile_equipment.equipment_code='$equipment_code'";
 
     $result = db_select_simple($tasks_table, $fields, $whereClause);
     $data = mysqli_fetch_assoc($result);

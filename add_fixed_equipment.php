@@ -278,7 +278,7 @@
                                     id="longitude" 
                                     size="" 
                                     maxlength=""
-                                    placeholder="-84.03109"
+                                    placeholder="-84,03109"
                                     value="<?php echo $_SESSION['LONGITUDE_TEMP']; ?>"
                                 >
                             </td>
@@ -292,7 +292,7 @@
                                     id="latitude" 
                                     size="" 
                                     maxlength=""
-                                    placeholder="9.91121"
+                                    placeholder="9,91121"
                                     value="<?php echo $_SESSION['LATITUDE_TEMP']; ?>"
                                 >
                             </td>
