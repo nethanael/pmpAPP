@@ -83,7 +83,11 @@
                         ?>     
                 </table>
             </div>
-        <a class="btn btn-info" href="index.php">Volver</a>
+            <div class = "row justify-content-center my_row">
+				<div class = "col-4 my_td">
+                    <a class="btn btn-info" href="index.php">Volver</a>
+                </div>
+			</div>
 		</div>
 
         <?php 

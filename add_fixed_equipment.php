@@ -56,7 +56,7 @@
                         </thead>
                         <tr>
                             <td class="my_td" colspan="2">
-                                <img src="imgs/eq_small.PNG"><br>
+                                <img src="imgs/eq_small.png"><br>
                                 <span class="text-danger">
                                     <?php echo $_SESSION['ADD_EQUIPMENT_ERROR'];?>
                                 </span>

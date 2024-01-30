@@ -41,8 +41,8 @@
 <body>
 	<div class = "container my_cont">
 
-	<?php include 'includes/header.php'; ?>
-	<?php //include 'includes/navBar.php'; ?>
+	    <?php include 'includes/header.php'; ?>
+	    <?php //include 'includes/navBar.php'; ?>
           
 		<div class = "row justify-content-center my_row">
 			<div class = "table-responsive my_scrollable_div">
@@ -64,26 +64,29 @@
                         <th><small>Region:</small></th>
                         <th><small>Estado:</small></th>
                     </tr>
-                        <?php                                                   //saca todos los valores de la base de datos y
-                                                                                // los hace filas
-                            while ($line =  $result->fetch_assoc()) 
-                                {
-                                    echo "<tr>";
-                                    foreach ($line as $col_name => $col_value)
-                                    {
-                                        if ($col_name == 'equipment_code'){
-                                            echo "<td class='my_td'><a class='btn btn-primary' href=add_fixed_equipment_detail.php?data=",$col_value,">$col_value</a></td>";
-                                        }
-                                        if ($col_name != 'equipment_code'){
-                                            echo "<td><small>$col_value</small></td>";
-                                        }
-                                    }
-                                    echo "</tr>";
+                    <?php                                                   //saca todos los valores de la base de datos
+                        while ($line =  $result->fetch_assoc()) 
+                        {
+                            echo "<tr>";
+                            foreach ($line as $col_name => $col_value)
+                            {
+                                if ($col_name == 'equipment_code'){
+                                    echo "<td class='my_td'><a class='btn btn-primary' href=add_fixed_equipment_detail.php?data=",$col_value,">$col_value</a></td>";
                                 }
-                        ?>     
+                                if ($col_name != 'equipment_code'){
+                                    echo "<td><small>$col_value</small></td>";
+                                }
+                            }
+                            echo "</tr>";
+                        }                                                  // los hace filas
+                        ?>   
                 </table>
             </div>
-        <a class="btn btn-info" href="index.php">Volver</a>
+            <div class = "row justify-content-center my_row">
+				<div class = "col-4 my_td">
+                    <a class="btn btn-info" href="index.php">Volver</a>
+                </div>
+			</div>
 		</div>
 
         <?php 
