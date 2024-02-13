@@ -127,7 +127,7 @@
                                     size="" 
                                     maxlength="4"
                                     placeholder="1115"
-                                    value="<?php echo $_SESSION['CENTRAL_CODE_TEMP']; ?>"
+                                    value="<?php print (isset($_SESSION['CENTRAL_CODE_TEMP'])) ? $_SESSION['CENTRAL_CODE_TEMP'] : "000" ?>"
                                 >
                             </td>
                         </tr>
@@ -141,7 +141,7 @@
                                     size="" 
                                     maxlength="3"
                                     placeholder="018"
-                                    value="<?php echo $_SESSION['DISTRICT_CODE_TEMP']; ?>"
+                                    value="<?php print (isset($_SESSION['DISTRICT_CODE_TEMP'])) ? $_SESSION['DISTRICT_CODE_TEMP'] : "000" ?>"
                                 >
                             </td>
                         </tr>
@@ -169,7 +169,7 @@
                                     size="" 
                                     maxlength="6"
                                     placeholder="115000"
-                                    value="<?php echo $_SESSION['SIMO_CODE_TEMP']; ?>"
+                                    value="<?php print (isset($_SESSION['SIMO_CODE_TEMP'])) ? $_SESSION['SIMO_CODE_TEMP'] : "000000" ?>"
                                 >
                             </td>
                         </tr>
@@ -253,7 +253,7 @@
                                     size="" 
                                     maxlength="10"
                                     placeholder="1010882"
-                                    value="<?php echo $_SESSION['PROPERTY_ID_TEMP']; ?>"
+                                    value="<?php print (isset($_SESSION['PROPERTY_ID_TEMP'])) ? $_SESSION['PROPERTY_ID_TEMP'] : "00000" ?>"
                                 >
                             </td>
                         </tr>
